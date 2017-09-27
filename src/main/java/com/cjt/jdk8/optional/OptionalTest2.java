@@ -15,7 +15,7 @@ public class OptionalTest2 {
 
         List<Employee> employees = Arrays.asList(employee1, employee2);
         Company company = new Company("company1");
-        //company.setEmployees(employees);
+        company.setEmployees(employees);
 
         Optional<Company> optional = Optional.ofNullable(company);
         System.out.println(optional.map(company1 -> company1.getEmployees()).orElse(Collections.emptyList()));

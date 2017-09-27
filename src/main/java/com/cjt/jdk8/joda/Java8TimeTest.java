@@ -2,6 +2,7 @@ package com.cjt.jdk8.joda;
 
 import java.time.*;
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -108,6 +109,11 @@ public class Java8TimeTest {
 
         System.out.println(Instant.now()); //2017-04-29T18:47:37.243Z
 
+
+        Date date = new Date();
+        LocalDate localDate8 = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+
+        System.out.println("localDate = " + localDate8);
 
     }
 

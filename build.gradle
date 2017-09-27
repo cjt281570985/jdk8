@@ -8,10 +8,11 @@ targetCompatibility = 1.8
 
 repositories {
 
-    maven{
-        name 'aliyun'
-        url 'http://maven.aliyun.com/nexus/content/groups/public'
-    }
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    maven { url "http://mvnrepo.code.taobao.org/nexus/content/repositories/snapshots/" }
+    maven { url "http://mvnrepo.code.taobao.org/nexus/content/repositories/releases/" }
+    maven { url "https://nexus.jackpinetech.com/nexus/content/groups/public" }
+    maven { url "http://repo.maven.apache.org/maven2" }
     mavenLocal()
     mavenCentral()
 }
@@ -22,6 +23,7 @@ dependencies {
     compile (
             "org.joda:joda-primitives:1.0",
             "joda-time:joda-time:2.9.9",
+            "org.projectlombok:lombok:1.16.18"
             //  "junit:junit:4.11"
     )
 }

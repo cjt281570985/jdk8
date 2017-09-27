@@ -1,0 +1,27 @@
+IntStream.range
+IntStream.rangeClosed
+peek
+map
+flatMap
+collect
+Reduce
+流的短路与并行
+
+过滤筛选
+filter()：接受一个谓词，返回符合条件的元素集合
+distinct()：返回集合中各异的元素集合(去重)
+limit()：截取流中指定数量的元素，返回一个不超过给定长度的流。如果流是有序的，则最多会返回前n个元素。
+skip()：跳过指定数量元素，返回一个扔掉了前n个元素的流。如果流中元素不足n个，则返回一个空流。
+map()：接受一个函数作为参数。这个函数会被应用到每个元素上，并将其映射成一个新的元素。
+flatMap()：一个流中的每个值都换成另一个流，然后把所有的流连接起来成为一个流，即扁平化为一个流。
+
+
+匹配，返回一个boolean
+- anyMatch()：至少匹配一个
+- allMatch()：全部匹配
+- noneMatch()：全部不匹配，和allMatch相反
+
+查找有2个方法：findFirst()和findAny()，返回一个Optional<T>集合。
+如果你不关心返回的元素是哪个，请使用findAny()，因为它在使用并行流时限制较少。
+
+归约在汇总结合内所有数据的时候使用。比如求 max，min，sum。

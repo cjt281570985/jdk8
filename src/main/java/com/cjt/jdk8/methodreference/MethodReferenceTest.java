@@ -33,6 +33,8 @@ public class MethodReferenceTest {
         //4.构造方法 类名::new
         //语法糖
         List<Student> studentList = Arrays.asList(student1,student2,student3,student4,student5);
+        studentList.sort((stu1, stu2) -> StudentUtil.compareStudentByNameStatic(stu1, stu2));
+
 
         List<Integer> integers = Arrays.asList(1, 2, 3, 5);
 //        integers.forEach(val -> System.out.println(val));
