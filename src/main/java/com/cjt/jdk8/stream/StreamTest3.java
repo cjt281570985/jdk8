@@ -17,7 +17,10 @@ public class StreamTest3 {
         Arrays.asList(arr).forEach(System.out::println);
 
         Stream<String> stream1 = Stream.of("hello", "world", "q2q", "99");
-        //List list = stream1.collect(Collectors.toList());
+        List list = stream1.collect(Collectors.toList());
+
+
+
         //List list = stream1.collect(() -> new ArrayList(), ((list1, str) -> list1.add(str)), (list1, list2) -> list1.addAll(list2));
 //        List list = stream1.collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
 //        list.forEach(System.out::println);

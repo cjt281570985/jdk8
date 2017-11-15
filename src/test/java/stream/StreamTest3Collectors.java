@@ -1,5 +1,7 @@
-package com.cjt.jdk8.stream3;
+package stream;
 
+
+import com.cjt.jdk8.stream3.Student;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -9,7 +11,7 @@ public class StreamTest3Collectors {
 
     public static void main(String[] args) {
 
-        Student student1 = new Student("zhangsan", 80);
+        Student student1 = new Student("zhangsang", 80);
         Student student2 = new Student("lisi", 90);
         Student student3 = new Student("wangwu", 100);
         Student student4 = new Student("zhaoliu", 90);
@@ -60,6 +62,7 @@ public class StreamTest3Collectors {
         System.out.println(studentMap);
         System.out.println("--------------------------------");
         Map<Integer, List<Student>> collect1 = studentList.stream().collect(Collectors.groupingBy(Student::getScore));
+        //Collectors.mapping
         Map<Integer, List<String>> collect2 = studentList.stream().collect(Collectors.groupingBy(Student::getScore, Collectors.mapping(Student::getName, Collectors.toList())));
         System.out.println(collect1);
         System.out.println(collect2);

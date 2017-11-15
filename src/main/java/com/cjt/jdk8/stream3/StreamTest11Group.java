@@ -1,8 +1,5 @@
 package com.cjt.jdk8.stream3;
 
-
-import com.cjt.jdk8.stream.Student;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +22,10 @@ public class StreamTest11Group {
         System.out.println(map);
 
         //select name, count(*) from student group by name
-        Map<String, Long> map2 = studentList.stream().collect(Collectors.groupingBy(Student::getName, Collectors.counting()));
+        Map<String, Long> map1 = studentList.stream().collect(Collectors.groupingBy(Student::getName, Collectors.counting()));
+        System.out.println(map1);
+
+        Map<String, Double> map2 = studentList.stream().collect(Collectors.groupingBy(Student::getName, Collectors.summingDouble(Student::getScore)));
         System.out.println(map2);
 
         Map<String, Double> map3 = studentList.stream().collect(Collectors.groupingBy(Student::getName, Collectors.averagingDouble(Student::getScore)));

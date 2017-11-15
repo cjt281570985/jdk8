@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class PersonTest {
 
     public static void main(String[] args) {
-        Person person1 = new Person("cjt", 25);
+        Person person1 = new Person("cj8t", 25);
         Person person2 = new Person("yzy", 22);
         Person person3 = new Person("lhq", 28);
 

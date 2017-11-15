@@ -17,7 +17,7 @@ public class StreamTest9 {
         rs.forEach(item->Arrays.asList(item).forEach(System.out::println));
 
         System.out.println("--------------");
-        //flatMap(Arrays::stream) 多看下 20
+        //flatMap(Arrays::stream)  20
         list.stream().map(item -> item.split(" ")).flatMap(Arrays::stream).distinct().forEach(System.out::println);
 
 

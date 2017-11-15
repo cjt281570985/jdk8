@@ -22,7 +22,7 @@ public class T2 {
         System.out.println("-------iterate--------");
 
         Stream.iterate(1, a->a+2).limit(6).forEach(System.out::println);
-        ;
+
         System.out.println("result: "+
                 Stream.iterate(1, a->a+2).limit(6).filter(a->a>2).mapToInt(a->a*2).skip(2).limit(2).summaryStatistics());
 

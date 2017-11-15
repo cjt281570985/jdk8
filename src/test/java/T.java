@@ -3,19 +3,24 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.function.BinaryOperator;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class T {
 
     public static void main(String[] args) {
 
-
-        System.out.println("15985857788".replaceAll("(\\d{3})(\\d{4})(\\d{4})", "$1****$2"));
-
-        System.out.println("abac".replace("a", "\\a")); //\ab\ac
-        System.out.println("abac".replaceAll("a", "\\a")); //abac
-        System.out.println("abac".replaceFirst("a", "\\a")); //abac
+        List<String> list2 = Arrays.asList("hello5", "world", "cjt");
+        list2.stream().map(a -> {
+            a = a.toUpperCase();
+            System.out.println("this is map");
+            return a;
+        }).findFirst().ifPresent(System.out::println)
+             ;
 
     }
 

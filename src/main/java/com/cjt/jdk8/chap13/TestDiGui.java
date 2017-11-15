@@ -13,9 +13,13 @@ public class TestDiGui {
 
     public static void main(String[] args) {
         TestDiGui diGui = new TestDiGui();
-        System.out.println(diGui.facttail(5, 1));
-        System.out.println(diGui.facttailOld(5));
+        long start = System.currentTimeMillis();
+        System.out.println(diGui.facttail(10, 1));
+        System.out.println("用时: " + (System.currentTimeMillis() - start));
 
+        long start2 = System.currentTimeMillis();
+        System.out.println(diGui.facttailOld(10));
+        System.out.println("用时2: " + (System.currentTimeMillis() - start2));
 
     }
 

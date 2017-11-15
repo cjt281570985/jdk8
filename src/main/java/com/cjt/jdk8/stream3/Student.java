@@ -9,7 +9,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return name;
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", score=" + score + '\'' +
+                '}';
     }
 
     private int score;
@@ -22,6 +25,13 @@ public class Student {
         this.age = age;
         this.phone = phone;
     }
+
+    public Student(String name, int score) {
+        this.name = name;
+        this.score = score;
+
+    }
+
     public Student(String name, int score, int age) {
         this.name = name;
         this.score = score;

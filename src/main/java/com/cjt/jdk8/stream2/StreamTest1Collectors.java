@@ -8,7 +8,7 @@ import static java.util.stream.Collectors.*;
 /**
  * Created by Administrator on 2017/2/17.
  */
-public class StreamTest1 {
+public class StreamTest1Collectors {
     public static void main(String[] args) {
         Student student1 = new Student("zhangsan", 80);
         Student student2 = new Student("lisi", 90);
@@ -59,6 +59,7 @@ public class StreamTest1 {
         System.out.println(studentList.stream().collect(partitioningBy(student -> student.getScore()>80, partitioningBy(student -> student.getScore()>90))));
         System.out.println(studentList.stream().collect(partitioningBy(student -> student.getScore()>80, counting())));
         //collectingAndThen  Optional::get  第25后面
+        //在名字分组一定存在分数,一定有值,需要将值取出来
         Map<String, Student> map1 = studentList.stream().collect(groupingBy(Student::getName,
                 collectingAndThen(minBy(Comparator.comparingInt(Student::getScore)), Optional::get)));
 
@@ -69,6 +70,8 @@ public class StreamTest1 {
         System.out.println("---------------");
         Map<Integer, List<Student>> ms = studentList.stream().collect(Collectors.groupingBy(Student::getScore, toList()));
         System.out.println(ms);
+
+        System.out.println(studentList.stream().collect(Collectors.groupingBy(Student::getScore)));
 
     }
 
