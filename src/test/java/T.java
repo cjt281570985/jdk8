@@ -1,28 +1,32 @@
-import java.math.BigDecimal;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.function.BinaryOperator;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+import java.util.HashMap;
+import java.util.Map;
 
 public class T {
 
     public static void main(String[] args) {
 
-        List<String> list2 = Arrays.asList("hello5", "world", "cjt");
-        list2.stream().map(a -> {
-            a = a.toUpperCase();
-            System.out.println("this is map");
-            return a;
-        }).findFirst().ifPresent(System.out::println)
-             ;
+        Map<Integer, String> map = new HashMap<>();
+        for(int i=0; i<10; i++){
+            //putIfAbsent使得我们不用写是否为null值的检测语句；
+            map.putIfAbsent(i, "val_"+i);
+        }
+
+        //-------1------maps不支持流。然而现在maps包括了许多新的非常有用的方法用于执行通用任务:
+        //forEach使用consumer来对map中的每个元素进行操作,执行通用任务。
+        map.forEach((key, val)-> System.out.println(key+" = " +val));
+
+        map.computeIfPresent(2, (k, v) -> v + k * 2);
+        map.computeIfPresent(9, (k, v) -> null);
+        System.out.println(map.get(2));
+        System.out.println(map.get(9));
+
+        map.merge(5, "val1", (oldVal, newVal) -> oldVal + "--" + newVal);
+        System.out.println(map.get(5));
+
 
     }
+
+
 
 
 }

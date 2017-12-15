@@ -50,7 +50,7 @@ public class TestMap {
         System.out.println(map.get(3));
 
 
-        System.out.println(map.getOrDefault(11, "no find"));
+        System.out.println(map.getOrDefault(3, "no find"));
 
     }
 }
