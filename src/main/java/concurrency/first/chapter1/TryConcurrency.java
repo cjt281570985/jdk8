@@ -1,4 +1,4 @@
-package wwj.thread.chapter1;
+package concurrency.first.chapter1;
 
 public class TryConcurrency {
 
