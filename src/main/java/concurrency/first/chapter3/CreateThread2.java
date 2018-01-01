@@ -21,6 +21,7 @@ public class CreateThread2 {
 
         threadGroup.enumerate(threads);
 
+        System.out.println("----------threads----------");
         Arrays.asList(threads).forEach(System.out::println);
 
 
