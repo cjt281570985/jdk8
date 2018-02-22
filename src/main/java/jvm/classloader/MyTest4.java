@@ -1,7 +1,7 @@
 package jvm.classloader;
 
 /**
- * 对于数组实例来说,其类型是由JVMd运行期动态生成的,表示为class [Ljvm.classloader.MyParent4
+ * 对于数组实例来说,其类型是由JVM运行期动态生成的,表示为class [Ljvm.classloader.MyParent4
  * 这种形式,动态生成的类型,其父类就是Object
  *
  * 对于数组来说,JavaDoc经常将构成数组的元素为Component,实际上就是将数组降低一个维度后来的类型.
