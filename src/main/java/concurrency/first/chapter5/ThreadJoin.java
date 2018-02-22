@@ -20,14 +20,15 @@ public class ThreadJoin {
         });
 
         t1.start();
-       // t2.start();
-        t1.join(100000,10);
-        //t2.join();
+        t2.start();
+        t1.join(100,10);
+        t2.join();
 
         Optional.of("All of tasks finish done.").ifPresent(System.out::println);
         IntStream.range(1, 1000)
                 .forEach(i -> System.out.println(Thread.currentThread().getName() + "->" + i));
 
+        //main线程等它自己结束
         Thread.currentThread().join();
     }
 }
