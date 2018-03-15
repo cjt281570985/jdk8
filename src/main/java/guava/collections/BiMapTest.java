@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class BiMapTest {
 
+    //HashBiMap存储的键和值都只能唯一，不存在键与键、值与值相同的情况
     @Test
     public void test() {
         HashBiMap<String, String> hashBiMap = HashBiMap.create();
@@ -31,7 +32,7 @@ public class BiMapTest {
     public void testForcePut() {
         HashBiMap<String, String> hashBiMap = HashBiMap.create();
         hashBiMap.put("1", "22");
-        //hashBiMap.put("2", "22");value already present: 22
+        //hashBiMap.put("2", "22"); //value already present: 22
         hashBiMap.forcePut("2", "22");
 
         System.out.println(hashBiMap); //{2=22}

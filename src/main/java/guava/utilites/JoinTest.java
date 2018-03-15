@@ -1,7 +1,9 @@
 package guava.utilites;
 
 import com.google.common.base.Joiner;
+import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Maps;
 
 import java.util.Arrays;
 import java.util.List;
@@ -30,11 +32,23 @@ public class JoinTest {
         String collect = list2.stream().filter(s -> s != null && s.length() > 0).collect(Collectors.joining("-"));
         System.out.println(collect); //java-php-ios
 
-        final Map<String, String> stringMap = ImmutableMap.of("java", ".net", "php", "ios");
+        final ImmutableMap<String, String> stringMap = ImmutableMap.of("java", ".net", "php", "ios");
         System.out.println(stringMap); //{java=.net, php=ios}
 
-        String str4 = Joiner.on("-").withKeyValueSeparator("=").join(stringMap);
-        System.out.println(str4); //java=.net-php=ios
+        String str4 = Joiner.on(",").withKeyValueSeparator("=").join(stringMap);
+        System.out.println(str4); //java=.net,php=ios
+
+        Map<String, String> map = Maps.newHashMap();
+        map.put("a", "111");
+        map.put("b", "222");
+
+        //map拼接成字符串  {a=111, b=222} -> a=111,b=222
+        String join = Joiner.on(",").withKeyValueSeparator("=").join(map);
+        System.out.println(join);
+
+        //字符串分割成对象 a=111,b=222  ->  {a=111, b=222}
+        Map<String, String> split = Splitter.on(",").withKeyValueSeparator("=").split(join);
+        System.out.println(split);
 
     }
 }

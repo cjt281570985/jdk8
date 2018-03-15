@@ -15,13 +15,13 @@ public class SplitTest {
         System.out.println(list);
 
         List<String> list0 = Splitter.on(Pattern.compile("\\-")).trimResults().splitToList("hello- world -java ");
-        System.out.println("list0: " + list0);
+        System.out.println("list0: " + list0);//list0: [hello, world, java]
 
         List<String> list1 = Splitter.onPattern("\\-").trimResults().splitToList("hello- world -java ");
-        System.out.println("list1: " + list1);
+        System.out.println("list1: " + list1);//list1: [hello, world, java]
 
         List<String> list2 = Splitter.on("-").splitToList(string);
-        System.out.println("list2: " + list2); //[hello, world, java]
+        System.out.println("list2: " + list2);//list2: [hello, world, java]
 
         System.out.println("--------------------------------");
         String string2 = "hello-world-java---";

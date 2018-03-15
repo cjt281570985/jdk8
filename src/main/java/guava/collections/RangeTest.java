@@ -53,6 +53,8 @@ public class RangeTest {
         System.out.println(open.contains(6));//false
         System.out.println(open.lowerEndpoint());//1
         System.out.println(open.upperEndpoint());//5
+        System.out.println(open.lowerBoundType());//OPEN
+        System.out.println(open.upperBoundType());//CLOSED
     }
 
     @Test

@@ -19,8 +19,14 @@ public class T {
 
         list1.stream().flatMap(a->list2.stream().map(b->a+" "+b)).forEach(System.out::println);
 
+        System.out.println(getDesensMobile(""));;
+
+    }
 
 
+    public static String getDesensMobile(String mobile) {
+        mobile = mobile.replaceAll("(\\d{3})\\d{4}(\\d{4})", "$1****$2");
+        return mobile;
     }
 
 }

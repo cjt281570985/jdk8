@@ -10,8 +10,8 @@ public class StringsTest {
     public static void main(String[] args) {
 
         String str = "";
-        System.out.println(Strings.emptyToNull(str));
-        System.out.println(Strings.isNullOrEmpty(str));
+        System.out.println(Strings.emptyToNull(str)); //null
+        System.out.println(Strings.isNullOrEmpty(str));//true
 
         System.out.println(Strings.commonPrefix("chenjt","chenlif"));//chen
         System.out.println(Strings.commonPrefix("chenjt","achenlif"));//""

@@ -29,6 +29,9 @@ public class ListsTest {
         reverse.forEach(System.out::println);
     }
 
+    /**
+     * 按指定数组元素个数分组,每组几个...余下的为1组
+     */
     @Test
     public void testParttion() {
         ArrayList<String> list = Lists.newArrayList("cjt", "yzy", "zlf", "jimmy", "666", "888", "hello");
