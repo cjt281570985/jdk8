@@ -2,6 +2,7 @@ import com.google.common.base.*;
 import com.google.common.base.Objects;
 import com.google.common.base.Optional;
 import com.google.common.collect.*;
+import redis.clients.jedis.Jedis;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -16,14 +17,12 @@ public class T {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Stopwatch stopwatch = Stopwatch.createStarted();
+        System.out.println(Math.round(9.49));
+        System.out.println(Math.round(9.5));
+        System.out.println(Math.round(-9.5));
+        System.out.println(Math.round(-9.51));
+        System.out.println(Math.round(-9.49));
 
-        TimeUnit.SECONDS.sleep(2);
-
-        stopwatch.stop();
-
-        System.out.println(stopwatch.elapsed(MILLISECONDS));
-        System.out.println(stopwatch);
 
     }
 

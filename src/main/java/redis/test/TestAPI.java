@@ -1,4 +1,4 @@
-package com.atguigu.redis.test;
+package redis.test;
 
 import java.util.Set;
 

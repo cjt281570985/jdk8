@@ -31,7 +31,7 @@ public class UseCyclicBarrier {
 	} 
 	
     public static void main(String[] args) throws IOException, InterruptedException {  
-        CyclicBarrier barrier = new CyclicBarrier(3);  // 3 
+        CyclicBarrier barrier = new CyclicBarrier(3);  // 3
         ExecutorService executor = Executors.newFixedThreadPool(3);  
         
         executor.submit(new Thread(new Runner(barrier, "zhangsan")));  

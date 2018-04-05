@@ -13,8 +13,9 @@ public class ThreadCloseGraceful2 {
                     e.printStackTrace();
                     break;
                 }*/
-
+                System.out.println("打断线程....");
                 if (Thread.interrupted()) {
+                    System.out.println("线程....XXXX被打断了...");
                     break;
                 }
 
@@ -35,6 +36,7 @@ public class ThreadCloseGraceful2 {
         }
 
         worker.interrupt();
+        System.out.println("打断线程....");
     }
 
 }

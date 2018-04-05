@@ -1,7 +1,6 @@
-package com.com.bjsxt.height.lock020;
+package com.bjsxt.height.lock020;
 
 import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class UseManyCondition {

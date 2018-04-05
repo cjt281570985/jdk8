@@ -29,6 +29,6 @@ public class ThreadJoin {
                 .forEach(i -> System.out.println(Thread.currentThread().getName() + "->" + i));
 
         //main线程等它自己结束
-        Thread.currentThread().join();
+        //Thread.currentThread().join();
     }
 }

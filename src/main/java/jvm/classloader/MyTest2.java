@@ -22,7 +22,9 @@ package jvm.classloader;
 public class MyTest2 {
 
     public static void main(String[] args) {
-        System.out.println(MyParent2.s);
+        System.out.println(MyParent2.d);
+
+
     }
 }
 //查看反编译
@@ -30,7 +32,9 @@ public class MyTest2 {
 
 class MyParent2{
     public static String str = "hello world";
-    public final static int s = -1;
+    public static final int s = -1;
+
+    public static final int d = 6;
 
     static {
         System.out.println("MyParent2 static block");

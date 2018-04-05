@@ -1,18 +1,18 @@
-package com.com.bjsxt.height.lock020;
+package com.bjsxt.height.lock020;
 
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class UseReentrantLock {
-	
+
+	//公平锁要维护一个顺序,浪费性能的
 	private Lock lock = new ReentrantLock();
 	
 	public void method1(){
 		try {
 			lock.lock();
 			System.out.println("当前线程:" + Thread.currentThread().getName() + "进入method1..");
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			System.out.println("当前线程:" + Thread.currentThread().getName() + "退出method1..");
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {

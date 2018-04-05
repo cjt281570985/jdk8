@@ -39,7 +39,7 @@ public class UseThreadPoolExecutor1 {
 		MyTask mt4 = new MyTask(4, "任务4");
 		MyTask mt5 = new MyTask(5, "任务5");
 		MyTask mt6 = new MyTask(6, "任务6");
-		
+
 		pool.execute(mt1);
 		pool.execute(mt2);
 		pool.execute(mt3);

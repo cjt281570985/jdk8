@@ -27,6 +27,7 @@ public class ThreadCloseGraceful {
             e.printStackTrace();
         }
 
+        //优雅的关闭
         worker.shutdown();
     }
 
