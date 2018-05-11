@@ -28,7 +28,7 @@ public class Test1 {
     System.out.println(maps);
 
     Map<String, String> stringMap = studentList.stream().collect(Collectors
-        .toMap(Student::getName, Student::getPhone, (s, a) -> s + "-" + a));
+        .toMap(Student::getName, Student::getPhone, (s, a) -> s + "<-" + a));
     System.out.println(stringMap);
 
     Map<String, Long> mapRs = studentList.stream().collect(Collectors.groupingBy(Student::getName, Collectors.counting()));
