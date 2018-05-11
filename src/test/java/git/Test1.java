@@ -24,7 +24,8 @@ public class Test1 {
     List<Student> studentList = Arrays.asList(stu1, stu2, stu3, stu4);
 
 
-    //该方法不能有重复的key 8add111222
+    //该方法不能有重复的key 8add111222  111
+    //13568
     Map<String, Integer> maps = studentList.stream().collect(Collectors.toMap(Student::getName, Student::getScore));
     System.out.println(maps);
 

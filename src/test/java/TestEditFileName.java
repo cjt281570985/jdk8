@@ -5,7 +5,6 @@ public class TestEditFileName
 
     public static void main(String[] args)
     {
-        //查找win文件3333333333
         File file = new File("E:\\study\\汪文君java\\汪文君多线程编程实战视频-第二阶段");
         //String newPath = "D:\\study\\李兴华Oracle";
         String delStr = "汪文君高并发编程第二阶段";
