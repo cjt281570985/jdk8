@@ -20,11 +20,12 @@ public class Test1 {
     Student stu2 = new Student("lisi", 90, 20, "15985857702");
     Student stu3 = new Student("wangwu", 70, 30, "15985857703");
     Student stu4 = new Student("lisi", 80, 40, "15985857704");
+    Student stu55555555555 = new Student("lisi", 80, 40, "15985857704");
 
     List<Student> studentList = Arrays.asList(stu1, stu2, stu3, stu4);
 
 
-    //该方法不能有重复的key 8add111222  111
+    //该方法不能有重复的key 8add111222  111 3546 7788
     //13568
     Map<String, Integer> maps = studentList.stream().collect(Collectors.toMap(Student::getName, Student::getScore));
     System.out.println(maps);
@@ -36,7 +37,7 @@ public class Test1 {
     Map<String, Long> mapRs = studentList.stream().collect(Collectors.groupingBy(Student::getName, Collectors.counting()));
     Set<Entry<String, Long>> entries = mapRs.entrySet();
 
-    System.out.println("--------------------------------");
+    System.out.println("------------adddddd--------------------");
     System.out.println(entries);
     Optional<Entry<String, Long>> max = entries.stream().max(Map.Entry.comparingByValue());
     System.out.println(max.get().getKey() + " = " + max.get().getValue()); //lisi = 2
