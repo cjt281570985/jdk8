@@ -35,6 +35,8 @@ public class Test1 {
 
     Map<String, Long> mapRs = studentList.stream().collect(Collectors.groupingBy(Student::getName, Collectors.counting()));
     Set<Entry<String, Long>> entries = mapRs.entrySet();
+
+    System.out.println("--------------------------------");
     System.out.println(entries);
     Optional<Entry<String, Long>> max = entries.stream().max(Map.Entry.comparingByValue());
     System.out.println(max.get().getKey() + " = " + max.get().getValue()); //lisi = 2

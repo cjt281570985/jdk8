@@ -9,7 +9,7 @@ public class TestEditFileName
         //String newPath = "D:\\study\\李兴华Oracle";
         String delStr = "汪文君高并发编程第二阶段";
         editName(file, delStr, file.getAbsolutePath());
-
+        //add by cjt
         String addName = "chenjt";
         // addFileName(file, ".avi", addName, newPath);
     }
