@@ -32,8 +32,7 @@ public class JodaTest3 {
 
 
     public static void main(String[] args) {
-
-        System.out.println(JodaTest3.convertUTF2Date("2016-11-23T09:22:36.756Z"));;
+        System.out.println(JodaTest3.convertUTF2Date("2016-11-23T09:22:36.756Z"));
         System.out.println(JodaTest3.convertDate2UTF(new Date()));
         System.out.println(JodaTest3.convertDate2LocalByFormat(new Date(), "yyyy-MM-dd HH:mm:ss.SSS"));;
 
