@@ -48,6 +48,8 @@ public class Test1 {
         .max(Map.Entry.comparingByValue())
         .map(Map.Entry::getKey);
     System.out.println(rs); //Optional[lisi]
+    System.out.println("--------------------------------");
+    System.out.println("-------------12-------------------");
 
   }
 }
