@@ -18,6 +18,7 @@ public class StreamTest11Group {
 
         //分组
         List<Student> studentList = Arrays.asList(stu1, stu2, stu3, stu4);
+        List<Student> studentList2 = Arrays.asList(stu1, stu2, stu3, stu4);
         Map<Integer, List<Student>> map =  studentList.stream().collect(Collectors.groupingBy(Student::getAge));
         System.out.println(map);
 
@@ -32,8 +33,15 @@ public class StreamTest11Group {
         System.out.println(map3);
 
         //分区操作, 是分组的一种特例
-        Map<Boolean, List<Student>> map5 = studentList.stream().collect(Collectors.partitioningBy(student -> student.getScore()>80));
+        Map<Boolean, List<Student>> map5 = studentList.stream().collect(Collectors.partitioningBy(student -> student.getScore()>180));
         System.out.println(map5);
+        System.out.println(map5.get(true).size());
+        System.out.println(map5.get(true) == null);
+
+        List<Student> students = map5.get(false);
+        //System.out.println(studentList.addAll(map5.get(true)));;
+        System.out.println(studentList2);;
+        System.out.println(students.addAll(studentList));;
 
     }
 }
