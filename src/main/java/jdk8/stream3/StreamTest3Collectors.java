@@ -29,9 +29,7 @@ public class StreamTest3Collectors {
         System.out.println(minStu.get());
         studentList.stream().collect(Collectors.maxBy(Comparator.comparingInt(Student::getScore))).ifPresent(System.out::println);
         System.out.println(studentList.stream().collect(Collectors.averagingDouble(Student::getScore)));
-        ;
         System.out.println(studentList.stream().collect(Collectors.summingInt(Student::getScore)));
-        ;
 
         IntSummaryStatistics intSummaryStatistics = studentList.stream().collect(Collectors.summarizingInt(Student::getScore));
         System.out.println(intSummaryStatistics);

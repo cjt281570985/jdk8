@@ -20,7 +20,7 @@ public class StreamTest3Comparator {
         //list.sort(Comparator.comparingInt(String::length).thenComparing(String.CASE_INSENSITIVE_ORDER).reversed());
         System.out.println(list);
 
-        //list.sort(Comparator.comparing(String::toLowerCase));
+        list.sort(Comparator.comparing(String::toLowerCase));
         System.out.println(list);
 
         //[hllo, hello, nihao, world, welcome, cjtabcdefg]
