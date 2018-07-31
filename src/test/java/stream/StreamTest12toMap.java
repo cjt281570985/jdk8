@@ -22,11 +22,11 @@ public class StreamTest12toMap {
 
         //该方法不能有重复的key
         //{lisi=80, zhangsan=100, wangwu=70, lisiq=90}
-//        Map<String, Integer> maps = studentList.stream().collect(Collectors.toMap(Student::getName, Student::getScore));
+       Map<String, Integer> maps = studentList.stream().collect(Collectors.toMap(Student::getName, Student::getScore, (a, b) -> a+b));
 //        //{lisi=Student{name='lisi', score=80'}, zhangsan=Student{name='zhangsan', score=100'}, wangwu=Student{name='wangwu', score=70'}, lisiq=Student{name='lisiq', score=90'}}
 //        Map<String, Student> maps2 = studentList.stream().collect(Collectors.toMap(Student::getName, Function.identity()));
-//        System.out.println(maps2);
-
+        System.out.println(maps);
+System.out.println("--------------------------------");
         Map<String, String> stringMap = studentList.stream().collect(Collectors.toMap(Student::getName, Student::getPhone, (s, a) -> s + "-" + a));
         System.out.println(stringMap);
 

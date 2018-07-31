@@ -13,12 +13,13 @@ public class StreamTest11Group {
 
     public static void main(String[] args) {
         Student stu1 = new Student("zhangsan", 100, 20);
-        Student stu2 = new Student("lisi", 90, 20);
+        Student stu2 = new Student("lisi", 30, 20);
         Student stu3 = new Student("wangwu", 90, 30);
-        Student stu4 = new Student("lisi", 80, 40);
+        Student stu4 = new Student("lisi", 60, 30);
+        Student stu5 = new Student("lisi", 80, 60);
 
         //分组
-        List<Student> studentList = Arrays.asList(stu1, stu2, stu3, stu4);
+        List<Student> studentList = Arrays.asList(stu1, stu2, stu3, stu4, stu5);
         Map<Integer, List<Student>> map =  studentList.stream().collect(Collectors.groupingBy(Student::getAge));
         System.out.println(map);
 

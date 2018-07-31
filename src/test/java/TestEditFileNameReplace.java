@@ -6,9 +6,9 @@ public class TestEditFileNameReplace
     public static void main(String[] args)
     {
         //查找win文件
-        File file = new File("H:\\刘德华");
+        File file = new File("I:\\阿杜");
         //String newPath = "D:\\study\\李兴华Oracle";
-        String delStr = "刘德华 - ";
+        String delStr = "阿杜 - ";
             editName(file, delStr, file.getAbsolutePath());
 
         String addName = "chenjt";
