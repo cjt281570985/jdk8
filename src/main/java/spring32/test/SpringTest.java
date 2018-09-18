@@ -23,6 +23,8 @@ public class SpringTest {
     System.out.println(person.say());
     Person person2 = (Person) factory.getBean("person");
 
+    System.out.println(person == person2);
+
   }
 
 }

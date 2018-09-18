@@ -26,9 +26,25 @@ public class StreamTest3Comparator {
         //[hllo, hello, nihao, world, welcome, cjtabcdefg]
         //[cjtabcdefg, welcome, hello, hkllo, nihao, world]
         //[world, nihao, hkllo, hello, welcome, cjtabcdefg]
-        list.sort(Comparator.comparingInt(String::length).reversed().
-                thenComparing(Comparator.comparing(String::toLowerCase)).reversed());
-
+        //list.sort(Comparator.comparingInt(String::length).reversed().thenComparing(Comparator.comparing(String::toLowerCase)).reversed());
+        System.out.println("--------------------------------");
+        list = Arrays.asList("nihao", "welcome","hkllo", "cjtabcdefg", "world", "hello");
+        list.sort(Comparator.comparingInt(String::length));
+        System.out.println(list);
+        list = Arrays.asList("nihao", "welcome","hkllo", "cjtabcdefg", "world", "hello");
+        list.sort(Comparator.comparingInt(String::length).thenComparing(Comparator.comparing(String::toLowerCase)));
+        System.out.println(list);
+        list = Arrays.asList("nihao", "welcome","hkllo", "cjtabcdefg", "world", "hello");
+        list.sort(Comparator.comparingInt(String::length).thenComparing(Comparator.comparing(String::toLowerCase)).reversed());
+        System.out.println(list);
+        list = Arrays.asList("nihao", "welcome","hkllo", "cjtabcdefg", "world", "hello");
+        list.sort(Comparator.comparingInt(String::length).reversed());
+        System.out.println(list);
+        list = Arrays.asList("nihao", "welcome","hkllo", "cjtabcdefg", "world", "hello");
+        list.sort(Comparator.comparingInt(String::length).reversed().thenComparing(Comparator.comparing(String::toLowerCase)));
+        System.out.println(list);
+        list = Arrays.asList("nihao", "welcome","hkllo", "cjtabcdefg", "world", "hello");
+        list.sort(Comparator.comparingInt(String::length).reversed().thenComparing(Comparator.comparing(String::toLowerCase)).reversed());
         System.out.println(list);
 
     }

@@ -17,11 +17,11 @@ public class T {
 
     public static void main(String[] args) throws InterruptedException {
 
-        System.out.println(Math.round(9.49));
-        System.out.println(Math.round(9.5));
-        System.out.println(Math.round(-9.5));
-        System.out.println(Math.round(-9.51));
-        System.out.println(Math.round(-9.49));
+        for (int i = 0; i < 10; i++) {
+            int num = new Random().nextInt(20);
+            CountDTO dto = new CountDTO("c" + i, num);
+        }
+
 
 
     }

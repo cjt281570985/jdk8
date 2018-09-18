@@ -10,6 +10,9 @@ public class ConsumerTest {
 
 
     public void test(Consumer<Integer> consumer){
+        System.out.println("--------------------------------");
+        System.out.println(consumer instanceof Consumer); //true
+        System.out.println(consumer instanceof IntConsumer); //false
         consumer.accept(100);
     }
 

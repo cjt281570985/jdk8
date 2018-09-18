@@ -5,9 +5,9 @@ public class TestEditFileName
 
     public static void main(String[] args)
     {
-        File file = new File("E:\\study\\汪文君java\\汪文君多线程编程实战视频-第二阶段");
+        File file = new File("G:\\study\\尚硅谷Python核心基础\\02-视频\\第1章&第2章");
         //String newPath = "D:\\study\\李兴华Oracle";
-        String delStr = "汪文君高并发编程第二阶段";
+        String delStr = "尚硅谷_Python基础_";
         editName(file, delStr, file.getAbsolutePath());
         //add by cjt
         String addName = "chenjt";

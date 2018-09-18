@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-	<bean id="person" class="spring32.test.PersonImpl">
+	<bean id="person" class="spring32.test.PersonImpl" scope="singleton">
     <property name="name" value="吉米"/>
 	</bean>
 

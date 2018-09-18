@@ -36,8 +36,9 @@ dependencies {
             // https://mvnrepository.com/artifact/org.springframework/spring-web
             'org.springframework:spring-web:3.2.0.RELEASE',
             // https://mvnrepository.com/artifact/commons-logging/commons-logging
-            'commons-logging:commons-logging:1.2'
-
+            'commons-logging:commons-logging:1.2',
+            // https://mvnrepository.com/artifact/tk.mybatis/mapper
+            'tk.mybatis:mapper:4.0.4-beta2'
 
 
     )
