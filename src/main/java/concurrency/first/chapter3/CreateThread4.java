@@ -10,7 +10,10 @@ public class CreateThread4 {
 
 
     public static void main(String[] args) {
-
+        System.out.println(1<<2);
+        System.out.println(1<<3);
+        System.out.println(1<<4);
+        System.out.println(1<<5);
         Thread t1 = new Thread(null, new Runnable() {
             @Override
             public void run() {
@@ -23,6 +26,9 @@ public class CreateThread4 {
             }
 
             private void add(int i) {
+                if (i + 10 > 297274) {
+                   return;
+                }
                 ++count;
                 add(i + 1);
             }

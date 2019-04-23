@@ -32,11 +32,13 @@ public class StreamTest12toMap {
         System.out.println(max.get().getKey() + " = " + max.get().getValue()); //lisi = 2
         //System.out.println(max.map(Map.Entry::getKey).get() + " = " + max.map(Map.Entry::getValue).get());
 
-        Optional<String> rs = studentList.stream().collect(Collectors.groupingBy(Student::getName, Collectors.counting()))
+        Optional<Long> rs = studentList.stream().collect(Collectors.groupingBy(Student::getName, Collectors.counting()))
                 .entrySet().stream()
                 .max(Map.Entry.comparingByValue())
-                .map(Map.Entry::getKey);
+                .map(Map.Entry::getValue);
         System.out.println(rs); //Optional[lisi]
+
+        System.out.println(studentList.stream().collect(Collectors.groupingBy(Student::getName, Collectors.counting())));
 
     }
 }

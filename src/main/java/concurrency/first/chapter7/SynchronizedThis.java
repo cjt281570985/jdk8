@@ -41,7 +41,7 @@ class ThisLock {
         //}
     }
 
-    public void m2() {
+    public synchronized void m2() {
         synchronized (LOCK) {
             try {
                 System.out.println(Thread.currentThread().getName());

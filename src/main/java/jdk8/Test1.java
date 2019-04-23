@@ -9,19 +9,16 @@ import java.util.List;
 public class Test1 {
 
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8);
-//        list.forEach(new Consumer<Integer>() {
-//            @Override
-//            public void accept(Integer integer) {
-//                System.out.println(integer);
-//            }
-//        });
-        list.forEach( (Integer i) -> {
-            System.out.println(i);
-        });
+          List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8);
 
-        System.out.println("--------------");
-        list.forEach(System.out::println);
+      list = list.subList(1,list.size());
+        list.stream().forEach(System.out::println);
+
 
     }
+
+  public static int get() {
+    System.out.println("----------");
+      return 7;
+  }
 }

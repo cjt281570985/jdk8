@@ -15,7 +15,6 @@ public class MyTest52 {
     }
 
 }
-
 class MyGrandpa52 {
     public static Thread thread = new Thread(){
         {
@@ -23,7 +22,6 @@ class MyGrandpa52 {
         }
     };
 }
-
 //接口中的常量 默认是 final, 类中的常量如果没定义为final那它就不是final
 class MyParent52 extends MyGrandpa52{
     public static Thread thread = new Thread(){
@@ -32,12 +30,9 @@ class MyParent52 extends MyGrandpa52{
         }
     };
 }
-
 class MyChild52 extends MyParent52 {
     public static int b = 6;
 }
-
-
 interface MyGrandpa5_2 {
     public static Thread thread = new Thread(){
         {
@@ -45,7 +40,6 @@ interface MyGrandpa5_2 {
         }
     };
 }
-
 interface MyParent5_2 extends  MyGrandpa5_2{
     public static Thread thread = new Thread(){
         {

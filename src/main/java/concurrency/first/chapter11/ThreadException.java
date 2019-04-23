@@ -5,7 +5,6 @@ public class ThreadException {
     private final static int A = 10;
     private final static int B = 0;
 
-
     //捕获异常
     public static void main(String[] args) {
 
@@ -17,14 +16,11 @@ public class ThreadException {
                 e.printStackTrace();
             }
         });
-
         t.setUncaughtExceptionHandler((thread, e) -> {
             System.out.println(e);
             System.out.println(thread);
         });
 
         t.start();
-
-
     }
 }

@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
+
+/**
+ * 综合案例
+ */
 public class CaptureServer {
 
     private static LinkedList<Control> CONTROLS = new LinkedList<>();

@@ -30,6 +30,12 @@ dependencies {
             'ch.qos.logback:logback-core:1.2.3',
             'redis.clients:jedis:2.9.0',
             "junit:junit:4.11",
+            //----------邮件--------
+            "javax.mail:javax.mail-api:1.6.2",
+            "com.sun.mail:javax.mail:1.6.2",
+            //----------邮件--------
+            // https://mvnrepository.com/artifact/com.alibaba/easyexcel
+            'com.alibaba:easyexcel:1.1.2-beta5',
             "org.springframework:spring-orm:3.2.0.RELEASE",
             // https://mvnrepository.com/artifact/org.springframework/spring-context
             'org.springframework:spring-context:3.2.0.RELEASE',
@@ -38,7 +44,10 @@ dependencies {
             // https://mvnrepository.com/artifact/commons-logging/commons-logging
             'commons-logging:commons-logging:1.2',
             // https://mvnrepository.com/artifact/tk.mybatis/mapper
-            'tk.mybatis:mapper:4.0.4-beta2'
+            'tk.mybatis:mapper:4.0.4-beta2',
+            // https://mvnrepository.com/artifact/org.openjdk.jmh/jmh-core
+            'org.openjdk.jmh:jmh-core:1.21',
+            'org.openjdk.jmh:jmh-generator-annprocess:1.21'
 
 
     )

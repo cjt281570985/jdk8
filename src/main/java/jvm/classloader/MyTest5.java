@@ -1,7 +1,5 @@
 package jvm.classloader;
 
-import java.util.Random;
-
 /**
  * 当一个接口在初始化时,并不要求父接口都完成初始化
  * 只有在真正使用到父接口的时候(如引用接口中定义的常量时)才会初始化

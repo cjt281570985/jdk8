@@ -4,9 +4,9 @@ public class TestEditFileNameReplace {
 
   public static void main(String[] args) {
     //查找win文件
-    File file = new File("G:\\study\\尚硅谷RBAC权限实战\\视频\\视频");
+    File file = new File("E:\\study\\Java架构师\\mq（下）");
     //String newPath = "D:\\study\\李兴华Oracle";
-    String delStr = " -尚硅谷-RBAC权限实战-";
+    String delStr = "rocketMQ实战-";
     editName(file, delStr, file.getAbsolutePath());
 
     String addName = "chenjt";
@@ -17,7 +17,7 @@ public class TestEditFileNameReplace {
     String name = file.getName();
     if (name.indexOf(delStr) != -1) {
       //String newName = name.substring(regex.length());//截取_后面的String
-      String newName = name.replace(delStr, ".");
+      String newName = name.replace(delStr, "");
       file.renameTo(new File(newPath + "\\" + newName));
     }
     //检查子目录

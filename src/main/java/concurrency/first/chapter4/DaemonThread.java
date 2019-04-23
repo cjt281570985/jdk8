@@ -11,7 +11,7 @@ public class DaemonThread {
             public void run() {
                 try {
                     System.out.println(Thread.currentThread().getName()+" ...run");
-                    Thread.sleep(30_000);
+                    Thread.sleep(3_000);
                     System.out.println(Thread.currentThread().getName()+" ...done");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -19,11 +19,10 @@ public class DaemonThread {
             }
         };
 
+        t.setDaemon(true);
         t.start();
-
-        Thread.sleep(20_000);
+      //  Thread.sleep(20_000);
         System.out.println(Thread.currentThread().getName());
-
     }
 
 

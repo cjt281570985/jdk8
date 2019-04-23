@@ -16,8 +16,8 @@ public class MyTest1 {
 
     public static void main(String[] args) {
 
-        //System.out.println(MyChild1.str);
-        System.out.println(MyChild1.str2);
+        System.out.println(MyChild1.str);
+        //System.out.println(MyChild1.str2);
 
     }
 }
@@ -32,7 +32,7 @@ class MyParent1{
 }
 
 class MyChild1 extends MyParent1{
-    public static final String str2 = "welcome";
+    public static String str2 = "welcome";
 
     static {
         System.out.println("Child1 static block");

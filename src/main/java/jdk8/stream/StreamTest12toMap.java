@@ -18,7 +18,7 @@ public class StreamTest12toMap {
         List<Student> studentList = Arrays.asList(stu1, stu2, stu3, stu4);
 
         //该方法不能有重复的key
-//        Map<String, Integer> maps = studentList.stream().collect(Collectors.toMap(Student::getName, Student::getScore));
+       Map<String, Integer> maps = studentList.stream().collect(Collectors.toMap(Student::getName, Student::getScore));
 //        System.out.println(maps);
 
         Map<String, String> stringMap = studentList.stream().collect(Collectors.toMap(Student::getName, Student::getPhone, (s, a) -> s + "-" + a));

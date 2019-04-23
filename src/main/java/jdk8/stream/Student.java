@@ -16,6 +16,9 @@ public class Student {
     private int age;
     private String phone;
 
+    public Student() {
+    }
+
     public Student(String name, int score, int age, String phone) {
         this.name = name;
         this.score = score;
