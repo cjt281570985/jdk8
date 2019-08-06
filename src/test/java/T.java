@@ -1,14 +1,11 @@
-import java.util.Random;
+import java.util.stream.IntStream;
 
 public class T {
 
     public static void main(String[] args) throws InterruptedException {
 
-        for (int i = 0; i < 10; i++) {
-            int num = new Random().nextInt(20);
-            CountDTO dto = new CountDTO("c" + i, num);
-        }
-
+        int[] a = {69, 8, -5, 6, 3, 85};
+        IntStream.of(a).min().ifPresent(System.out::println);
 
 
     }

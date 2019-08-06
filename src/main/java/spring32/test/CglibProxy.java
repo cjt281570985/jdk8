@@ -1,7 +1,6 @@
 package spring32.test;
 
 import java.lang.reflect.Method;
-import jdk8.stream.Student;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;

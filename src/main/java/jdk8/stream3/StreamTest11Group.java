@@ -39,9 +39,9 @@ public class StreamTest11Group {
         System.out.println(map5.get(true) == null);
 
         List<Student> students = map5.get(false);
-        //System.out.println(studentList.addAll(map5.get(true)));;
+        //System.out.println(studentList.addAll(map5.get(true)));
         System.out.println(studentList2);;
-        System.out.println(students.addAll(studentList));;
+        System.out.println(students.addAll(studentList));
 
     }
 }
