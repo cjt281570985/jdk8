@@ -6,9 +6,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import org.junit.Test;
-import sun.font.FontUtilities;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
