@@ -1,5 +1,0 @@
-JMH S 14 jmh.test.JMH02 S 45 jmh.test.generated.JMH02_appendString_jmhTest S 12 appendString S 11 AverageTime E A 1 1 1 E E E E E E E E E E E E E E U 12 MICROSECONDS E E 
-JMH S 14 jmh.test.JMH02 S 51 jmh.test.generated.JMH02_appendStringBuffer_jmhTest S 18 appendStringBuffer S 11 AverageTime E A 1 1 1 E E E E E E E E E E E E E E U 12 MICROSECONDS E E 
-JMH S 14 jmh.test.JMH01 S 38 jmh.test.generated.JMH01_hello_jmhTest S 5 hello S 11 AverageTime E A 1 1 1 E E E E E E E E E E E E E E U 12 MILLISECONDS E E 
-JMH S 14 jmh.test.JMH02 S 52 jmh.test.generated.JMH02_appendStringBuilder_jmhTest S 19 appendStringBuilder S 11 AverageTime E A 1 1 1 E E E E E E E E E E E E E E U 12 MICROSECONDS E E 
-JMH S 14 jmh.test.JMH03 S 47 jmh.test.generated.JMH03_testThroughput_jmhTest S 14 testThroughput S 10 Throughput E A 1 1 1 E I 1 5 E E I 1 5 E E E E E E E E E U 7 SECONDS E E 
