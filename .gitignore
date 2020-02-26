@@ -6,6 +6,6 @@
 /.gradle/.DS_Store
 /settings.gradle
 /build/
-build/*
+**/build/*
 gradlew
 gradlew.bat
