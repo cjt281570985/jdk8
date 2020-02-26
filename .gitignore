@@ -1,6 +1,7 @@
 /.gradle
 /.idea
 /out
+/.DS_Store
 *.iml
 /.gradle/.DS_Store
 /settings.gradle
