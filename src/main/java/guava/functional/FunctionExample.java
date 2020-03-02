@@ -15,7 +15,7 @@ public class FunctionExample {
             }
         };
 
-        System.out.println(function.apply(null));
+        System.out.println(function.apply("null"));
 
     }
 }

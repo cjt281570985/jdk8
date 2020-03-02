@@ -1,11 +1,8 @@
 package stream;
 
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 

@@ -14,6 +14,8 @@ public class SplitTest {
         List<String> list = Splitter.on("-").limit(2).splitToList(string);//[hello, world-java]
         System.out.println(list);
 
+        //List<String> list0 = Splitter.on("-").trimResults().splitToList("hello- world -java ");
+        //下面行结果也一样
         List<String> list0 = Splitter.on(Pattern.compile("\\-")).trimResults().splitToList("hello- world -java ");
         System.out.println("list0: " + list0);//list0: [hello, world, java]
 
@@ -27,8 +29,8 @@ public class SplitTest {
         String string2 = "hello-world-java---";
         List<String> list3 = Splitter.on("-").splitToList(string2);
         List<String> list4 = Splitter.on("-").omitEmptyStrings().splitToList(string2);
-        System.out.println("list3: " + list3); //[hello, world, java, , , ]
-        System.out.println("list4: " + list4); //[hello, world, java]
+        System.out.println("list3: " + list3); //[hello, world, java, , , ]  去除元素空格, 空元素保留
+        System.out.println("list4: " + list4); //[hello, world, java]   去除空元素
 
         System.out.println("--------------------------------");
         String string3 = "hello- world -java ";
