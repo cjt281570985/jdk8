@@ -24,7 +24,7 @@ dependencies {
             "org.joda:joda-primitives:1.0",
             "joda-time:joda-time:2.9.9",
             //"org.projectlombok:lombok:1.16.20",
-            "com.google.guava:guava:24.0-jre",
+            "com.google.guava:guava:28.2-jre",
             'org.slf4j:slf4j-api:1.7.25',
             'ch.qos.logback:logback-classic:1.2.3',
             'ch.qos.logback:logback-core:1.2.3',

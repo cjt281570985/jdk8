@@ -12,7 +12,7 @@ public class BiMapTest {
         HashBiMap<String, String> hashBiMap = HashBiMap.create();
         hashBiMap.put("1", "2");
         System.out.println(hashBiMap);
-        //hashBiMap.put("2", "2"); //value already present: 2
+        hashBiMap.put("2", "2"); //value already present: 2
         System.out.println(hashBiMap);
     }
 
