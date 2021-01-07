@@ -4,9 +4,9 @@ public class TestEditFileNameReplaceMac {
 
     public static void main(String[] args) {
         //查找win文件
-        File file = new File("/Users/jimmy/Desktop/cjt/study/快速掌握Charles抓包工具/");
+        File file = new File("/Volumes/500G/于斯课堂-菲伯尔钢琴基础教程100节/");
         //String newPath = "D:\\study\\李兴华Oracle";
-        String delStr = "999";
+        String delStr = "---菲伯尔钢琴基础教程";
         editName(file, delStr, file.getAbsolutePath());
 
         String addName = "chenjt";
@@ -18,12 +18,12 @@ public class TestEditFileNameReplaceMac {
         if (name.indexOf(delStr) != -1) {
             //String newName = name.substring(regex.length());//截取_后面的String
             String newName = name.replace(delStr, "");
-            file.renameTo(new File(newPath + "//" + newName));
+            file.renameTo(new File(newPath + "/" + newName));
         }
         //检查子目录
         if (file.isDirectory()) {
             for (File child : file.listFiles()) {
-                editName(child, delStr, newPath);
+                editName(child, delStr, child.isFile() ? child.getParent() : child.getAbsolutePath());
             }
         }
     }
