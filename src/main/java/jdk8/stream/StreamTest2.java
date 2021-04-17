@@ -1,6 +1,7 @@
 package jdk8.stream;
 
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
@@ -22,5 +23,11 @@ public class StreamTest2 {
         List<Integer> list = Arrays.asList(1,2,3,4,5,6);
         System.out.println(list.stream().map(val->2*val).reduce(3, Integer::sum));
         list.stream().map(val->2*val).reduce(Integer::sum).ifPresent(System.out::println);
+
+
+        List<BigDecimal> list2 = Arrays.asList(new BigDecimal("2.3"), new BigDecimal(5.12));
+
+        BigDecimal reduce = list2.stream().reduce(BigDecimal.ZERO, BigDecimal::add);
+        System.out.println(reduce);
     }
 }
