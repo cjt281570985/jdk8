@@ -16,7 +16,7 @@ public class MyTest1 {
 
     public static void main(String[] args) {
 
-        System.out.println(MyChild1.str);
+        System.out.println(MyChild1.str); //此行虽然没有初始化MyChild1,但也加载了该类
         //System.out.println(MyChild1.str2);
 
     }

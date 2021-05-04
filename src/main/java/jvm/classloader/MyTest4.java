@@ -12,6 +12,8 @@ package jvm.classloader;
  */
 public class MyTest4 {
 
+    //  javap -c jvm.classloader.MyTest4
+
     public static void main(String[] args) {
 
         //MyParent4 myParent4 = new MyParent4();

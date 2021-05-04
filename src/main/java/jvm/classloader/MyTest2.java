@@ -22,18 +22,19 @@ package jvm.classloader;
 public class MyTest2 {
 
     public static void main(String[] args) {
+        System.out.println(MyParent2.str);
+        System.out.println(MyParent2.a);
         System.out.println(MyParent2.d);
         System.out.println(MyParent2.ss);
         System.out.println(MyParent2.sa);
-
-
     }
 }
 //查看反编译
 //E:\gitSpace\jdk8\out\production\classes>javap -c jvm.classloader.MyTest2
 
 class MyParent2{
-    public static String str = "hello world";
+    public static final String str = "hello world";
+    public static final float a = 2;
     public static final int s = -1;
     public static final int ss = 128;
     public static final int sa = 127;
