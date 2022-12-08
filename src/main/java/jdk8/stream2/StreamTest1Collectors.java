@@ -56,8 +56,10 @@ public class StreamTest1Collectors {
 
         Map<Integer, Map<String, List<Student>>> map = studentList.stream().collect(groupingBy(Student::getScore, groupingBy(Student::getName)));
         System.out.println(map);
+        System.out.println("---------------111-----------------");
         System.out.println(studentList.stream().collect(partitioningBy(student -> student.getScore()>80, partitioningBy(student -> student.getScore()>90))));
         System.out.println(studentList.stream().collect(partitioningBy(student -> student.getScore()>80, counting())));
+        System.out.println("---------------111-----------------");
         //collectingAndThen  Optional::get  第25后面
         //在名字分组一定存在分数,一定有值,需要将值取出来
         Map<String, Student> map1 = studentList.stream().collect(groupingBy(Student::getName,

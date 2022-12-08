@@ -4,9 +4,9 @@ public class TestEditFileNameReplaceMac {
 
     public static void main(String[] args) {
         //查找win文件
-        File file = new File("/Users/jimmy/Desktop/cjt/study/城sd/");
+        File file = new File("/Users/jimmy/Downloads/it相关/希赛王勇.2021.软考高级系统架构设计师/");
         //String newPath = "D:\\study\\李兴华Oracle";
-        String delStr = "【om】";
+        String delStr = "_rkku.cn_QQ群10677026";
         editName(file, delStr, file.getAbsolutePath());
 
         String addName = "chenjt";
