@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -17,7 +18,7 @@ public class StreamTest12toMap {
         Student stu1 = new Student("zhangsan", 100, 20, "15985857701");
         Student stu2 = new Student("lisi", 90, 20, "15985857702");
         Student stu3 = new Student("wangwu", 70, 30, "15985857703");
-        Student stu4 = new Student("lisi", 80, 40, "15985857704");
+        Student stu4 = new Student("lisi2", 80, 40, "15985857704");
 
         List<Student> studentList = Arrays.asList(stu1, stu2, stu3, stu4);
 
@@ -25,7 +26,7 @@ public class StreamTest12toMap {
         //{lisi=80, zhangsan=100, wangwu=70, lisiq=90}
        Map<String, Integer> maps = studentList.stream().collect(Collectors.toMap(Student::getName, Student::getScore, (a, b) -> a+b));
 //        //{lisi=Student{name='lisi', score=80'}, zhangsan=Student{name='zhangsan', score=100'}, wangwu=Student{name='wangwu', score=70'}, lisiq=Student{name='lisiq', score=90'}}
-//        Map<String, Student> maps2 = studentList.stream().collect(Collectors.toMap(Student::getName, Function.identity()));
+        Map<String, Student> maps2 = studentList.stream().collect(Collectors.toMap(Student::getName, t -> t));
         System.out.println(maps);
 System.out.println("--------------------------------");
         Map<String, String> stringMap = studentList.stream().collect(Collectors.toMap(Student::getName, Student::getPhone, (s, a) -> s + "-" + a));
@@ -49,5 +50,6 @@ System.out.println("--------------------------------");
                 .max(Map.Entry.comparingByValue())
                 .map(Map.Entry::getKey);
         System.out.println(rs); //Optional[lisi]
+        System.out.println(maps2);
     }
 }
