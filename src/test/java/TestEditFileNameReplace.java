@@ -4,9 +4,9 @@ public class TestEditFileNameReplace {
 
     public static void main(String[] args) {
         //查找win文件
-        File file = new File("F:\\study\\201904\\p4 JAVA天眼大型分布式跟踪系统视频");
+        File file = new File("I:\\01.study\\it架构师\\马士兵MCA架构师2025\\26-P7_面试突击\\4-金九银十大厂面试题全解 - 副本");
         //String newPath = "D:\\study\\李兴华Oracle";
-        String delStr = "[www.xpcoding.com]";
+        String delStr = "【更多资源微信x923713】";
         editName(file, delStr, file.getAbsolutePath());
 
         String addName = "chenjt";
